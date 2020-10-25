@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
 
+.container {
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -10,6 +16,7 @@ body {
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Nunito', sans-serif;
 }
 
 nav {
@@ -31,8 +38,13 @@ a {
     transition: all 0.3s ease 0s;
 }
 
-.hover_text:hover {
+.hover_text {
     color: #8F03FD;
+}
+
+.hover_text:hover {
+    color: #979797;
+    cursor: pointer;
 }
 
 a:hover {
@@ -67,13 +79,14 @@ li{
     text-decoration: none;
 }
 
-#home, #story, #projects {
+#home, #story, #projects, #contact {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    scroll-snap-align: start;
 }
 
 .home_image {
@@ -83,6 +96,12 @@ li{
 
 .story_image {
     margin-left: 110px;
+    object-fit: contain;
+    height: 85vh;
+}
+
+.contact_image {
+    margin-left: 30px;
     object-fit: contain;
     height: 85vh;
 }
@@ -113,7 +132,7 @@ li{
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: rgba(76, 76, 76, 0.69);
 }
@@ -136,7 +155,7 @@ p {
     padding: 15px 65px 15px 65px;
     border-radius: 10px;
     letter-spacing: 1.5px;
-    font-weight: 600;
+    font-weight: 700;
     border-style: none;
     background-color: #F50C52;
     color: white;
@@ -157,7 +176,7 @@ p {
     padding: 15px 65px 15px 65px;
     border-radius: 10px;
     letter-spacing: 1.5px;
-    font-weight: 600;
+    font-weight: 700;
     border-style: none;
     background-color: #FFC700;
     color: rgb(255, 255, 255);
@@ -178,7 +197,7 @@ p {
     padding: 15px 65px 15px 65px;
     border-radius: 10px;
     letter-spacing: 1.5px;
-    font-weight: 600;
+    font-weight: 700;
     border-style: none;
     background-color: #00D1FF;
     color: rgb(255, 255, 255);
@@ -195,9 +214,30 @@ p {
     transform: translate(-7px, -7px);
 }
 
+.purple_primary_button {
+    padding: 15px 65px 15px 65px;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    border-style: none;
+    background-color: #8F03FD;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 15px #9103fd59;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 12px;
+}
+
+.purple_primary_button:hover {
+    box-shadow: 5px 15px 20px #9103fd9a;
+    transform: translate(-7px, -7px);
+}
+
 .red_flat_button {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 15px 25px 15px 25px;
     border-radius: 10px;
     letter-spacing: 1.5px;
@@ -213,7 +253,6 @@ p {
 
 .red_flat_button:hover{
     color: #8F03FD;
-    font-weight: 700;
 }
 
 .social_bar {
@@ -224,3 +263,95 @@ p {
     margin-left: 80px;
 }
 
+input[type=text] {
+    width: 50%;
+    padding: 15px 25px 15px 25px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #E4E4E4;
+    color: #4D4D4D;
+    letter-spacing: 1.5px;
+}
+
+.sub_label {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #626262;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.sub_checkbox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    background-color: #E4E4E4;
+    border-radius: 5px;
+}
+
+.sub_label input:active ~ .sub_checkbox {
+    background-color: #8F03FD;
+}
+
+.sub_label input:checked ~ .sub_checkbox {
+    background-color: #8F03FD;
+}
+
+.sub_checkbox:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.sub_label input:checked ~ .sub_checkbox:after {
+    display: block;
+}
+
+.sub_label .sub_checkbox:after { 
+    left: 7px; 
+    bottom: 6px; 
+    width: 3px; 
+    height: 7px; 
+    border: solid white; 
+    border-width: 0 3px 3px 0; 
+    -webkit-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+} 
+
+.footer_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer {
+    padding: 40px 85px;
+    height: 80vh;
+    width: 100%;
+    background-color: #F6F6F6;
+}
+
+.sc_logo {
+    height: 50px;
+}
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
