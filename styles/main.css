@@ -358,17 +358,24 @@ input[type=checkbox] {
 
 /*===============================================*/
 
-.tariffCards {
-    position: relative;
+.projectsContainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.projectsCards {
+    position: static;
     top: 50%;
-    width: 400px;
+    width: 360px;
     left: 50%;
-    margin: -180px 0 0 -140px;
+    margin: -30px 0 0 30px;
     user-select: none;
     transform: translate3d(0, 0, 0) rotateX(15deg);
     transform-style: preserve-3d;
   }
-  .tariffCards:after {
+
+  .projectsCards:after {
     position: relative;
     bottom: -27px;
     left: 5%;
@@ -378,10 +385,10 @@ input[type=checkbox] {
     border-radius: 100%;
     background-image: radial-gradient(rgba(34,50,84,0.04), rgba(34,50,84,0));
   }
-  .tariffCards > div {
+  .projectsCards > div {
     position: relative;
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 12px;
     color: #fff;
     transform: rotateX(45deg) rotateY(-15deg) rotate(45deg);
@@ -389,7 +396,7 @@ input[type=checkbox] {
     overflow: hidden;
     cursor: pointer;
   }
-  .tariffCards > div:after {
+  .projectsCards > div:after {
     position: absolute;
     top: -70px;
     left: 0;
@@ -399,18 +406,19 @@ input[type=checkbox] {
     background-image: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%);
     transform: translateX(-100%);
   }
-  .tariffCards > div img {
-    margin-top: 15px;
+  .projectsCards > div img {
+    margin-top: 10px;
+    margin-left: 10px;
     pointer-events: none;
   }
-  .tariffCards > div h3 {
+  .projectsCards > div h3 {
     position: absolute;
     bottom: 28px;
     left: 15px;
     font-size: 18px;
     font-weight: 800;
   }
-  .tariffCards > div span {
+  .projectsCards > div span {
     position: absolute;
     font-weight: 700;
     bottom: 15px;
@@ -419,37 +427,37 @@ input[type=checkbox] {
     font-weight: 600;
     opacity: 0.8;
   }
-  .tariffCards > div.economy {
+  .projectsCards > div.economy {
     margin-top: 0;
     z-index: 3;
     background-color: #8063e1;
     background-image: linear-gradient(135deg, #bd7be8, #8063e1);
     box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #8063e1;
   }
-  .tariffCards > div.premiumeconomy {
-    margin-top: -70px;
+  .projectsCards > div.premiumeconomy {
+    margin-top: -100px;
     z-index: 2;
     background-color: #3f58e3;
     background-image: linear-gradient(135deg, #7f94fc, #3f58e3);
     box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #3f58e3;
   }
-  .tariffCards > div.business {
-    margin-top: -70px;
+  .projectsCards > div.business {
+    margin-top: -100px;
     z-index: 1;
     background-color: #2c6fd1;
     background-image: linear-gradient(135deg, #21bbfe, #2c6fd1);
     box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #2c6fd1;
   }
-  .tariffCards > div.first {
+  .projectsCards > div.first {
     margin-top: -70px;
     background-color: #352f64;
     background-image: linear-gradient(135deg, #415197, #352f64);
     box-shadow: 5px 5px 60px rgba(34,50,84,0.1), 1px 1px 0px 1px #352f64;
   }
-  .tariffCards > div:hover {
+  .projectsCards > div:hover {
     transform: rotateX(30deg) rotateY(-15deg) rotate(30deg) translate(-25px, 50px);
   }
-  .tariffCards > div:hover:after {
+  .projectsCards > div:hover:after {
     transform: translateX(100%);
     transition: all 1.2s ease-in-out;
   }
