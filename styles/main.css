@@ -486,8 +486,8 @@ input[type=checkbox] {
   }
 
   .projectsCards > div.covid19_card {
-    margin-top: -100px;
-    z-index: 2;
+    margin-top: 0px;
+    z-index: 3;
     color: #000000;
     background-color: #00D1FF;
     background-image: url(../assets/images/covid19card.png);
@@ -505,12 +505,30 @@ input[type=checkbox] {
   }
 
   .projectsCards > div.orbus_card {
-    margin-top: 0px;
-    z-index: 3;
+    margin-top: -100px;
+    z-index: 2;
     color: #113A52;
     background-color: #FE9323;
     background-image: url(../assets/images/orbuscard.png);/*linear-gradient(135deg,#FE9323, #FFE951);*/
     box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #FE9323;
+  }
+
+  .projectsCards > div.hangon_card {
+    margin-top: -100px;
+    z-index: 2;
+    color: #fff;
+    background-color: #FE9323;
+    background-image: url(../assets/images/hangoncard.png);/*linear-gradient(135deg,#FE9323, #FFE951);*/
+    box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #FE9323;
+  }
+
+  .projectsCards > div.cusafe_card {
+    margin-top: -100px;
+    z-index: 1;
+    background-color: #2c6fd1;
+    background-image: url(../assets/images/cusafecard.png);
+    /* background-image: linear-gradient(135deg, #6dd5ed, #2193b0); */
+    box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #BD163E;
   }
 
   .projectsCards > div:hover {
