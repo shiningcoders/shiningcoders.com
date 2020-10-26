@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
 .container {
     scroll-behavior: smooth;
     overflow: auto;
@@ -194,6 +200,7 @@ p {
 }
 
 .blue_primary_button {
+    margin-top: 40px;
     padding: 15px 65px 15px 65px;
     border-radius: 10px;
     letter-spacing: 1.5px;
@@ -340,7 +347,10 @@ input[type=checkbox] {
 }
 
 .footer {
-    padding: 40px 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 85px 25px 85px;
     height: 70vh;
     width: 100%;
     background-color: #F6F6F6;
@@ -356,12 +366,29 @@ input[type=checkbox] {
     align-items: center;
 }
 
+.footer_links {
+    margin: 0px 60px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_bar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+}
+
 /*==============[Project Container]===================*/
 
 .projectsContainer {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
-
 }
 
 .projectsCards {
@@ -476,3 +503,37 @@ input[type=checkbox] {
       width: 10px;
       border-radius: 50%;
   }
+
+.red_dot {
+    border: solid 2px #F50C52;
+}
+
+.red_dot:hover {
+    background-color: #F50C52;
+}
+
+.yellow_dot {
+    border: solid 2px #FFC700;
+}
+
+.yellow_dot:hover {
+    background-color: #FFC700;
+}
+
+.blue_dot {
+    border: solid 2px #00D1FF;
+}
+
+.blue_dot:hover {
+    background-color: #00D1FF;
+}
+
+.purple_dot {
+    border: solid 2px #8F03FD;
+}
+
+.purple_dot:hover {
+    background-color: #8F03FD;
+}
+
+/*===============================*/
