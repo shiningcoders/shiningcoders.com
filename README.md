@@ -8,4 +8,4 @@ Website Homepage UI
 - Hovering Effects
 - Media Queries for Mobile and Tablet Devices
 - Transitional Efects
-- Scrolling Animations 
+- Scrolling Animations
