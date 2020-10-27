@@ -5,6 +5,7 @@ html {
     scroll-behavior: smooth;
     overflow: auto;
     scroll-snap-type: y mandatory;
+    /* cursor: url(../assets/cursors/main_cursor.svg), pointer; */
 }
 
 .container {
