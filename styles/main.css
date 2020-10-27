@@ -39,6 +39,10 @@ nav {
     text-decoration: none;
 }
 
+.menu_button {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: #626262;
@@ -541,7 +545,7 @@ input[type=checkbox] {
     transition: all 1.2s ease-in-out;
   }
 
-  /*==========[Dot Nav]============*/
+/*============[Dot Nav]============*/
   .dot_nav {
       position: fixed;
       right: 0px;
@@ -588,4 +592,35 @@ input[type=checkbox] {
     background-color: #8F03FD;
 }
 
-/*===============================*/
+/*==============[Media Queries]=================*/
+
+@media screen and (max-width: 1198px) {
+
+    .dot_nav {
+        display: none;
+    }
+
+    .home_image {
+        margin-left: -15px;
+    }
+    
+    .story_image {
+        margin-left: 60pxpx;
+    }
+    
+    .contact_image {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .top_bar_links {
+        display: none;
+    }
+    .placeholder_logo {
+        display: none;
+    }
+    .menu_button{
+        display: block;
+    }
+}
