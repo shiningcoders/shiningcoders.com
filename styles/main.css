@@ -203,8 +203,8 @@ p {
   border-style: none;
   background-color: #F50C52;
   color: white;
-  -webkit-box-shadow: 0px 8px 15px #f50c522c;
-          box-shadow: 0px 8px 15px #f50c522c;
+  -webkit-box-shadow: 0px 8px 15px #F50C52 2c;
+          box-shadow: 0px 8px 15px #F50C52 2c;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -214,8 +214,8 @@ p {
 }
 
 .red_primary_button:hover {
-  -webkit-box-shadow: 5px 15px 20px #f50c5260;
-          box-shadow: 5px 15px 20px #f50c5260;
+  -webkit-box-shadow: 5px 15px 20px #F50C52 60;
+          box-shadow: 5px 15px 20px #F50C52 60;
   -webkit-transform: translate(-7px, -7px);
           transform: translate(-7px, -7px);
 }
