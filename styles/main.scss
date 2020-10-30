@@ -21,7 +21,7 @@ html {
     scroll-behavior: smooth;
     overflow: auto;
     scroll-snap-type: y mandatory;
-    /* cursor: url(../assets/cursors/main_cursor.svg), pointer; */
+    cursor: url(../assets/cursors/main_cursor_small.png), pointer;
 }
 
 .container {
@@ -71,12 +71,13 @@ a {
 
 .hover_text:hover {
     color: color("mid-grey");
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
 }
 
 a:hover {
     color: color("purple");
     font-weight: 700;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
 }
 
 ul {
@@ -188,7 +189,7 @@ p {
     color: white;
     box-shadow: 0px 8px 15px color("red")2c;
     transition: all 0.3s ease 0s;
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
     outline: none;
     border: none;
     font-size: 12px;
@@ -209,7 +210,7 @@ p {
     color: rgb(255, 255, 255);
     box-shadow: 0px 8px 15px #ffc80042;
     transition: all 0.3s ease 0s;
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
     outline: none;
     border: none;
     font-size: 12px;
@@ -231,7 +232,7 @@ p {
     color: rgb(255, 255, 255);
     box-shadow: 0px 8px 15px #00d0ff4f;
     transition: all 0.3s ease 0s;
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
     outline: none;
     border: none;
     font-size: 12px;
@@ -252,7 +253,7 @@ p {
     color: rgb(255, 255, 255);
     box-shadow: 0px 8px 15px #9103fd59;
     transition: all 0.3s ease 0s;
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
     outline: none;
     border: none;
     font-size: 12px;
@@ -274,7 +275,7 @@ p {
     background-color: #fff;
     color:  color("dark-grey");
     transition: all 0.3s ease 0s;
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
     outline: none;
     border: none;
 }
@@ -311,7 +312,7 @@ input[type=text] {
     align-items: center;
     padding-left: 30px;
     margin-bottom: 0px;
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
     font-size: 16px;
     color: color("dark-grey");
 }
@@ -463,7 +464,7 @@ input[type=checkbox] {
     transform: rotateX(45deg) rotateY(-15deg) rotate(45deg);
     transition: all 0.4s ease;
     overflow: hidden;
-    cursor: pointer;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
   }
   .projectsCards > div:after {
     position: absolute;
@@ -582,6 +583,7 @@ input[type=checkbox] {
 
 .red_dot:hover {
     background-color: color("red");
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
 }
 
 .yellow_dot {
@@ -590,6 +592,7 @@ input[type=checkbox] {
 
 .yellow_dot:hover {
     background-color: color("yellow");
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
 }
 
 .blue_dot {
@@ -598,6 +601,7 @@ input[type=checkbox] {
 
 .blue_dot:hover {
     background-color: color("blue");
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
 }
 
 .purple_dot {
@@ -606,6 +610,7 @@ input[type=checkbox] {
 
 .purple_dot:hover {
     background-color: color("purple");
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
 }
 
 /*==============[Media Queries]=================*/
