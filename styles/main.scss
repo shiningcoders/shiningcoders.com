@@ -3,6 +3,20 @@
 
 $side-margin: 85px;
 
+$colors-map: (
+    "red": #F50C52,
+    "yellow": #FFC700,
+    "blue": #00D1FF,
+    "purple": #8F03FD,
+    "dark-grey": #626262,
+    "mid-grey": #979797,
+    "light-grey": #F6F6F6,
+);
+
+@function color($color-name) {
+    @return map-get($colors-map, $color-name);
+}
+
 html {
     scroll-behavior: smooth;
     overflow: auto;
@@ -33,7 +47,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 85px 40px 90px;
+    padding: 40px $side-margin 40px 90px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -47,21 +61,21 @@ nav {
 
 a {
     text-decoration: none;
-    color: #626262;
+    color: color("dark-grey");
     transition: all 0.3s ease 0s;
 }
 
 .hover_text {
-    color: #8F03FD;
+    color: color("purple");
 }
 
 .hover_text:hover {
-    color: #979797;
+    color: color("mid-grey");
     cursor: pointer;
 }
 
 a:hover {
-    color: #8F03FD;
+    color: color("purple");
     font-weight: 700;
 }
 
@@ -81,7 +95,7 @@ li{
 }
 
 .nav_home_logo {
-    color: #F50C52;
+    color: color("red");
     font-family: 'Montserrat Alternates', sans-serif;
     text-transform: uppercase;
     font-size: 1em;
@@ -141,7 +155,7 @@ li{
 .text_section {
     color: black;
     font-family: 'Nunito', sans-serif;
-    margin-left: 85px;
+    margin-left: $side-margin;
 }
 
 h4 {
@@ -161,7 +175,7 @@ h2 {
 
 p {
     margin-bottom: 40px;
-    color: #979797;
+    color: color("mid-grey");
 }
 
 .red_primary_button {
@@ -170,9 +184,9 @@ p {
     letter-spacing: 1.5px;
     font-weight: 700;
     border-style: none;
-    background-color: #F50C52;
+    background-color: color("red");
     color: white;
-    box-shadow: 0px 8px 15px #f50c522c;
+    box-shadow: 0px 8px 15px color("red")2c;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
@@ -181,7 +195,7 @@ p {
 }
 
 .red_primary_button:hover {
-    box-shadow: 5px 15px 20px #f50c5260;
+    box-shadow: 5px 15px 20px color("red")60;
     transform: translate(-7px, -7px);
 }
 
@@ -191,7 +205,7 @@ p {
     letter-spacing: 1.5px;
     font-weight: 700;
     border-style: none;
-    background-color: #FFC700;
+    background-color: color("yellow");
     color: rgb(255, 255, 255);
     box-shadow: 0px 8px 15px #ffc80042;
     transition: all 0.3s ease 0s;
@@ -213,7 +227,7 @@ p {
     letter-spacing: 1.5px;
     font-weight: 700;
     border-style: none;
-    background-color: #00D1FF;
+    background-color: color("blue");
     color: rgb(255, 255, 255);
     box-shadow: 0px 8px 15px #00d0ff4f;
     transition: all 0.3s ease 0s;
@@ -234,7 +248,7 @@ p {
     letter-spacing: 1.5px;
     font-weight: 700;
     border-style: none;
-    background-color: #8F03FD;
+    background-color: color("purple");
     color: rgb(255, 255, 255);
     box-shadow: 0px 8px 15px #9103fd59;
     transition: all 0.3s ease 0s;
@@ -258,7 +272,7 @@ p {
     font-weight: 600;
     border-style: none;
     background-color: #fff;
-    color:  #626262;
+    color:  color("dark-grey");
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
@@ -266,7 +280,7 @@ p {
 }
 
 .red_flat_button:hover{
-    color: #8F03FD;
+    color: color("purple");
 }
 
 .social_bar {
@@ -299,7 +313,7 @@ input[type=text] {
     margin-bottom: 0px;
     cursor: pointer;
     font-size: 16px;
-    color: #626262;
+    color: color("dark-grey");
 }
 
 input[type=checkbox] {
@@ -317,11 +331,11 @@ input[type=checkbox] {
 }
 
 .sub_label input:active ~ .sub_checkbox {
-    background-color: #8F03FD;
+    background-color: color("purple");
 }
 
 .sub_label input:checked ~ .sub_checkbox {
-    background-color: #8F03FD;
+    background-color: color("purple");
 }
 
 .sub_checkbox:after{
@@ -357,10 +371,10 @@ input[type=checkbox] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 85px 25px 85px;
+    padding: 40px $side-margin 25px $side-margin;
     height: 80vh;
     width: 100%;
-    background-color: #F6F6F6;
+    background-color: color("light-grey");
 }
 
 .sc_logo {
@@ -486,7 +500,7 @@ input[type=checkbox] {
   .projectsCards > div.leftnright_card {
     margin-top: 0;
     z-index: 3;
-    background-color: #8F03FD;
+    background-color: color("purple");
     background-image: url(../assets/images/leftnrightcard.png);
     /* background-image: linear-gradient(135deg, #bd7be8, #8063e1); */
     box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #8063e1;
@@ -496,7 +510,7 @@ input[type=checkbox] {
     margin-top: 0px;
     z-index: 3;
     color: #000000;
-    background-color: #00D1FF;
+    background-color: color("blue");
     background-image: url(../assets/images/covid19card.png);
     /* background-image: linear-gradient(135deg, #A5FECB, #5433FF); */
     box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #AFF2FE;
@@ -563,35 +577,35 @@ input[type=checkbox] {
   }
 
 .red_dot {
-    border: solid 2px #F50C52;
+    border: solid 2px color("red");
 }
 
 .red_dot:hover {
-    background-color: #F50C52;
+    background-color: color("red");
 }
 
 .yellow_dot {
-    border: solid 2px #FFC700;
+    border: solid 2px color("yellow");
 }
 
 .yellow_dot:hover {
-    background-color: #FFC700;
+    background-color: color("yellow");
 }
 
 .blue_dot {
-    border: solid 2px #00D1FF;
+    border: solid 2px color("blue");
 }
 
 .blue_dot:hover {
-    background-color: #00D1FF;
+    background-color: color("blue");
 }
 
 .purple_dot {
-    border: solid 2px #8F03FD;
+    border: solid 2px color("purple");
 }
 
 .purple_dot:hover {
-    background-color: #8F03FD;
+    background-color: color("purple");
 }
 
 /*==============[Media Queries]=================*/
