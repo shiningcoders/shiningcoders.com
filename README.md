@@ -5,6 +5,7 @@ Website Homepage UI
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://shiningcoders.github.io/shiningcoders.com/)
 [![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://shiningcoders.github.io/shiningcoders.com/)
 [![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://shiningcoders.github.io/shiningcoders.com/)
+[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://shiningcoders.github.io/shiningcoders.com/)
 ## Road Map
 
 - Desktop UI
