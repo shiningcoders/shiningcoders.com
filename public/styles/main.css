@@ -781,21 +781,21 @@ input[type=checkbox] {
     display: none;
   }
   .menu_button {
-    display: block;
+    display: none;
   }
   nav {
     background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     padding: 25px 40px 25px 40px;
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -822,6 +822,21 @@ input[type=checkbox] {
     font-weight: 700;
     margin-bottom: 20px;
     color: #4D4D4D;
+  }
+  .h2_subscribe {
+    margin-top: 5px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: #4D4D4D;
+  }
+  input[type=text] {
+    width: 100%;
+  }
+  .sub_label {
+    margin-top: -0.8rem;
+    margin-bottom: -1.3rem;
   }
   p {
     margin-bottom: 30px;
@@ -873,7 +888,7 @@ input[type=checkbox] {
   .contact_image {
     -o-object-fit: contain;
        object-fit: contain;
-    width: 70%;
+    height: 100%;
   }
   .spacer100 {
     min-height: 0px;
@@ -919,7 +934,7 @@ input[type=checkbox] {
             justify-content: center;
   }
   .left_panel2 {
-    height: 60vh;
+    height: 55vh;
     width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -939,7 +954,7 @@ input[type=checkbox] {
     padding-left: 40px;
   }
   .right_panel2 {
-    height: 40vh;
+    height: 45vh;
     width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -974,11 +989,6 @@ input[type=checkbox] {
   }
   .social_bar {
     display: none;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    margin-bottom: 20px;
-    margin-left: 80px;
   }
   .projectsContainer {
     margin-top: 0px;
@@ -989,9 +999,8 @@ input[type=checkbox] {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: auto;
-    width: 400px;
-    margin-right: 40px;
+    height: 120px;
+    overflow-x: scroll;
   }
   .projectsContainer .secondSlot {
     display: none;
@@ -999,7 +1008,7 @@ input[type=checkbox] {
   .projectsCards {
     position: static;
     top: 50%;
-    width: auto;
+    width: 400px;
     left: 50%;
     margin: 0px 0px 0px 0px;
     -webkit-user-select: none;
@@ -1114,8 +1123,8 @@ input[type=checkbox] {
     background-color: #FE9323;
     background-image: url(../assets/images/orbuscard.png);
     /*linear-gradient(135deg,#FE9323, #FFE951);*/
-    -webkit-box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #FE9323;
-            box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #FE9323;
+    -webkit-box-shadow: 4px 4px 10px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #FE9323;
+            box-shadow: 4px 4px 10px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px #FE9323;
   }
   .projectsCards > div.hangon_card {
     margin-top: 0px;
@@ -1145,6 +1154,116 @@ input[type=checkbox] {
             transform: translateX(100%);
     -webkit-transition: all 1.2s ease-in-out;
     transition: all 1.2s ease-in-out;
+  }
+  .blue_primary_button {
+    margin-top: 1rem;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    border-style: none;
+    background-color: #00D1FF;
+    color: white;
+    -webkit-box-shadow: 0px 8px 15px #00d0ff4f;
+            box-shadow: 0px 8px 15px #00d0ff4f;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
+    outline: none;
+    border: none;
+    font-size: 12px;
+  }
+  .social_bar_footer {
+    display: none;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 40px 40px 25px 40px;
+    height: 80vh;
+    width: 100%;
+    background-color: #F6F6F6;
+  }
+  .sc_logo {
+    height: 30px;
+  }
+  .footer_top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer_links {
+    margin: 0px 100px 0px 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .products_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .experiments_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .education_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .developer_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer_bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .page_link_footer {
+    margin-bottom: 15px;
+    text-transform: capitalize;
   }
 }
 /*# sourceMappingURL=main.css.map */

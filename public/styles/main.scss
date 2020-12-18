@@ -656,23 +656,26 @@ input[type=checkbox] {
 //=============<MOBILE QUERIES>==================
 
 @media screen and (max-width: 700px) {
+
     .top_bar_links {
         display: none;
     }
+
     .placeholder_logo {
         display: none;
     }
+
     .menu_button{
-        display: block;
+        display: none;
     }
 
     nav {
         background-color: rgb(255, 255, 255);
         display: flex;
-        justify-content: space-between;
+        justify-content: start;
         align-items: center;
         padding: 25px 40px 25px 40px;
-        position: fixed;
+        position: absolute;
         top: 0px;
         left: 0px;
         right: 0px;
@@ -702,6 +705,24 @@ input[type=checkbox] {
         font-weight: 700;
         margin-bottom: 20px;
         color: #4D4D4D;
+    }
+
+    .h2_subscribe{
+        margin-top: 5px;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+        color: #4D4D4D;
+    }
+
+    input[type=text]{
+        width: 100%;
+    }
+
+    .sub_label{
+        margin-top: -0.8rem;
+        margin-bottom: -1.3rem;
     }
 
     
@@ -747,7 +768,7 @@ input[type=checkbox] {
     
     .contact_image {
         object-fit: contain;
-        width: 70%;
+        height: 100%;
     }
     
     .spacer100 {
@@ -780,7 +801,7 @@ input[type=checkbox] {
     }
 
     .left_panel2 {
-        height: 60vh;
+        height: 55vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -792,7 +813,7 @@ input[type=checkbox] {
     }
 
     .right_panel2 {
-        height: 40vh;
+        height: 45vh;
         width: 100vw;
         display: flex;
         flex-direction: column-reverse;
@@ -818,165 +839,237 @@ input[type=checkbox] {
 
     .social_bar {
         display: none;
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-        margin-bottom: 20px;
-        margin-left: 80px;
     }
 
-    //============= Project Cards for Mobile View =====================
+    //============= Project Cards for Mobile View =====================//
 
     
-.projectsContainer {
-    margin-top: 0px;
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    width: 400px;
-    margin-right: 40px;
-}
+    .projectsContainer {
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        height: 120px;
+        overflow-x: scroll;
+    }
 
-.projectsContainer .secondSlot{
-    display: none;
-}
+    .projectsContainer .secondSlot{
+        display: none;
+    }
 
-.projectsCards {
-    position: static;
-    top: 50%;
-    width: auto;
-    left: 50%;
-    margin: 0px 0px 0px 0px;
-    user-select: none;
-    transform: translate3d(0, 0, 0) rotateX(0deg);
-    transform-style: preserve-3d;
-    display: flex;
-    flex-direction: row;
-  }
+    .projectsCards {
+        position: static;
+        top: 50%;
+        width: 400px;
+        left: 50%;
+        margin: 0px 0px 0px 0px;
+        user-select: none;
+        transform: translate3d(0, 0, 0) rotateX(0deg);
+        transform-style: preserve-3d;
+        display: flex;
+        flex-direction: row;
+    }
 
-  .projectsCards:after {
-    position: relative;
-    bottom: -27px;
-    left: 5%;
-    content: '';
-    width: 65%;
-    height: 10px;
-    border-radius: 100%;
-    background-image: radial-gradient(rgba(34,50,84,0.04), rgba(34,50,84,0));
-  }
+    .projectsCards:after {
+        position: relative;
+        bottom: -27px;
+        left: 5%;
+        content: '';
+        width: 65%;
+        height: 10px;
+        border-radius: 100%;
+        background-image: radial-gradient(rgba(34,50,84,0.04), rgba(34,50,84,0));
+    }
 
-  .projectsCards > div {
-    position: relative;
-    min-width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    color: #fff;
-    font-weight: 700;
-    transform: rotateX(0deg) rotateY(0deg) rotate(0deg);
-    transition: all 0.4s ease;
-    overflow: hidden;
-    margin-right: 20px;
-    cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
-  }
+    .projectsCards > div {
+        position: relative;
+        min-width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: 700;
+        transform: rotateX(0deg) rotateY(0deg) rotate(0deg);
+        transition: all 0.4s ease;
+        overflow: hidden;
+        margin-right: 20px;
+        cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
+    }
 
-  .projectsCards > div:after {
-    position: absolute;
-    top: -70px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%);
-    object-fit: cover;
-    transform: translateX(100%);
-  }
-  .projectsCards > div img {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-    margin-left: 10px;
-    pointer-events: none;
-  }
-  .projectsCards > div h3 {
-    position: absolute;
-    bottom: 18px;
-    left: 15px;
-    font-size: 14px;
-    font-weight: 800;
-  }
-  .projectsCards > div span {
-    position: absolute;
-    font-weight: 700;
-    bottom: 7px;
-    left: 15px;
-    font-size: 9px;
-    font-weight: 600;
-    opacity: 0.8;
-  }
+    .projectsCards > div:after {
+        position: absolute;
+        top: -70px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%);
+        object-fit: cover;
+        transform: translateX(100%);
+    }
+    .projectsCards > div img {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+        pointer-events: none;
+    }
+    .projectsCards > div h3 {
+        position: absolute;
+        bottom: 18px;
+        left: 15px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    .projectsCards > div span {
+        position: absolute;
+        font-weight: 700;
+        bottom: 7px;
+        left: 15px;
+        font-size: 9px;
+        font-weight: 600;
+        opacity: 0.8;
+    }
 
-  .projectsCards > div.leftnright_card {
-    margin-top: 0;
-    z-index: 3;
-    background-color: color("purple");
-    background-image: url(../assets/images/leftnrightcard.png);
-    /* background-image: linear-gradient(135deg, #bd7be8, #8063e1); */
-    box-shadow: 4px 4px 10px rgba(34,50,84,0.5), 1px 1px 0px 1px #8063e1;
-  }
+    .projectsCards > div.leftnright_card {
+        margin-top: 0;
+        z-index: 3;
+        background-color: color("purple");
+        background-image: url(../assets/images/leftnrightcard.png);
+        /* background-image: linear-gradient(135deg, #bd7be8, #8063e1); */
+        box-shadow: 4px 4px 10px rgba(34,50,84,0.5), 1px 1px 0px 1px #8063e1;
+    }
 
-  .projectsCards > div.covid19_card {
-    margin-top: 0px;
-    z-index: 3;
-    color: #000000;
-    background-color: color("blue");
-    background-image: url(../assets/images/covid19card.png);
-    /* background-image: linear-gradient(135deg, #A5FECB, #5433FF); */
-    box-shadow: 4px 4px 10px rgba(34,50,84,0.5), 1px 1px 0px 1px #AFF2FE;
-  }
+    .projectsCards > div.covid19_card {
+        margin-top: 0px;
+        z-index: 3;
+        color: #000000;
+        background-color: color("blue");
+        background-image: url(../assets/images/covid19card.png);
+        /* background-image: linear-gradient(135deg, #A5FECB, #5433FF); */
+        box-shadow: 4px 4px 10px rgba(34,50,84,0.5), 1px 1px 0px 1px #AFF2FE;
+    }
 
-  .projectsCards > div.codera_card {
-    margin-top: 0px;
-    z-index: 1;
-    background-color: #2c6fd1;
-    background-image: url(../assets/images/coderacard.png);
-    /* background-image: linear-gradient(135deg, #6dd5ed, #2193b0); */
-    box-shadow: 4px 4px 10px rgba(34,50,84,0.5), 1px 1px 0px 1px #2193b0;
-  }
+    .projectsCards > div.codera_card {
+        margin-top: 0px;
+        z-index: 1;
+        background-color: #2c6fd1;
+        background-image: url(../assets/images/coderacard.png);
+        /* background-image: linear-gradient(135deg, #6dd5ed, #2193b0); */
+        box-shadow: 4px 4px 10px rgba(34,50,84,0.5), 1px 1px 0px 1px #2193b0;
+    }
 
-  .projectsCards > div.orbus_card {
-    margin-top: 0px;
-    z-index: 2;
-    color: #113A52;
-    background-color: #FE9323;
-    background-image: url(../assets/images/orbuscard.png);/*linear-gradient(135deg,#FE9323, #FFE951);*/
-    box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #FE9323;
-  }
+    .projectsCards > div.orbus_card {
+        margin-top: 0px;
+        z-index: 2;
+        color: #113A52;
+        background-color: #FE9323;
+        background-image: url(../assets/images/orbuscard.png);/*linear-gradient(135deg,#FE9323, #FFE951);*/
+        box-shadow: 4px 4px 10px rgba(34,50,84,0.5), 1px 1px 0px 1px #FE9323;
+    }
 
-  .projectsCards > div.hangon_card {
-    margin-top: 0px;
-    z-index: 2;
-    color: #fff;
-    background-color: #FE9323;
-    background-image: url(../assets/images/hangoncard.png);/*linear-gradient(135deg,#FE9323, #FFE951);*/
-    box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #FE9323;
-  }
+    .projectsCards > div.hangon_card {
+        margin-top: 0px;
+        z-index: 2;
+        color: #fff;
+        background-color: #FE9323;
+        background-image: url(../assets/images/hangoncard.png);/*linear-gradient(135deg,#FE9323, #FFE951);*/
+        box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #FE9323;
+    }
 
-  .projectsCards > div.cusafe_card {
-    margin-top: 0px;
-    z-index: 1;
-    background-color: #2c6fd1;
-    background-image: url(../assets/images/cusafecard.png);
-    /* background-image: linear-gradient(135deg, #6dd5ed, #2193b0); */
-    box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #BD163E;
-  }
+    .projectsCards > div.cusafe_card {
+        margin-top: 0px;
+        z-index: 1;
+        background-color: #2c6fd1;
+        background-image: url(../assets/images/cusafecard.png);
+        /* background-image: linear-gradient(135deg, #6dd5ed, #2193b0); */
+        box-shadow: 20px 20px 60px rgba(34,50,84,0.5), 1px 1px 0px 1px #BD163E;
+    }
 
-  .projectsCards > div:hover {
-    transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(0px, -20px);
-  }
+    .projectsCards > div:hover {
+        transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(0px, -20px);
+    }
 
-  .projectsCards > div:hover:after {
-    transform: translateX(100%);
-    transition: all 1.2s ease-in-out;
-  }
+    .projectsCards > div:hover:after {
+        transform: translateX(100%);
+        transition: all 1.2s ease-in-out;
+    }
 
+    .blue_primary_button {
+        margin-top: 1rem;
+        padding: 15px 30px 15px 30px;
+        border-radius: 10px;
+        letter-spacing: 1.5px;
+        font-weight: 700;
+        border-style: none;
+        background-color: color("blue");
+        color: rgb(255, 255, 255);
+        box-shadow: 0px 8px 15px #00d0ff4f;
+        transition: all 0.3s ease 0s;
+        cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+
+    .social_bar_footer{
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 40px 25px 40px;
+        height: 80vh;
+        width: 100%;
+        background-color: color("light-grey");
+    }
+    
+    .sc_logo {
+        height: 30px;
+    }
+    
+    .footer_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer_links {
+        margin: 0px 100px 0px 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    .products_list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .experiments_list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .education_list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .developer_list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer_bar {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+    
+    .page_link_footer {
+        margin-bottom: 15px;
+        text-transform: capitalize;
+    }
+    
 
 }
