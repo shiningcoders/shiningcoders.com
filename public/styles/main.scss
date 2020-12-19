@@ -20,6 +20,7 @@ $colors-map: (
 html {
     scroll-behavior: smooth;
     overflow: auto;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
     cursor: url(../assets/cursors/main_cursor_small.png), pointer;
 }
@@ -455,24 +456,18 @@ input[type=checkbox] {
 .projectsCards {
     position: static;
     top: 50%;
-    width: 360px;
+    width: 4000px;
     left: 50%;
     margin: -30px 0 0 30px;
     user-select: none;
-    transform: translate3d(0, 0, 0) rotateX(15deg);
+    transform: translate3d(0, 0, 0) rotateX(10deg);
     transform-style: preserve-3d;
   }
 
   .projectsCards:after {
-    position: relative;
-    bottom: -27px;
-    left: 5%;
-    content: '';
-    width: 65%;
-    height: 10px;
-    border-radius: 100%;
-    background-image: radial-gradient(rgba(34,50,84,0.04), rgba(34,50,84,0));
+    display: none;
   }
+
   .projectsCards > div {
     position: relative;
     width: 160px;
@@ -485,15 +480,9 @@ input[type=checkbox] {
     overflow: hidden;
     cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
   }
+
   .projectsCards > div:after {
-    position: absolute;
-    top: -70px;
-    left: 0;
-    content: '';
-    width: 200%;
-    height: 200%;
-    background-image: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%);
-    transform: translateX(-100%);
+    display: none;
   }
   .projectsCards > div img {
     margin-top: 10px;
@@ -674,7 +663,7 @@ input[type=checkbox] {
         display: flex;
         justify-content: start;
         align-items: center;
-        padding: 25px 40px 25px 40px;
+        padding: 2rem 40px 2rem 40px;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -692,27 +681,26 @@ input[type=checkbox] {
     }
 
     h4 {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         font-size: 1rem;
         font-weight: 600;
         color: rgba(76, 76, 76, 0.69);
     }
     
     h2 {
-        margin-top: 5px;
-        font-size: 40px;
-        line-height: 40px;
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        line-height: 2.8rem;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 1.5rem;
         color: #4D4D4D;
     }
 
     .h2_subscribe{
-        margin-top: 5px;
-        font-size: 30px;
-        line-height: 40px;
+        margin-top: 0.3rem;
+        font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.4rem;
         color: #4D4D4D;
     }
 
@@ -727,7 +715,7 @@ input[type=checkbox] {
 
     
     p {
-        margin-bottom: 30px;
+        margin-bottom: 2rem;
         color: color("mid-grey");
         overflow: hidden;
         font-size: 0.9rem;
@@ -750,13 +738,16 @@ input[type=checkbox] {
     .home_image {
         object-fit: contain;
         height: 80%;
-        margin-top: 5rem;
+        margin-top: 6rem;
+        transition: all 0.3s ease 0s;
     }
     
     .story_image {
         object-fit: contain;
         height: 100%;
+        padding-top: 0.5rem;
         margin-left: 0px;
+        transition: all 0.3s ease 0s;
     }
 
     .projects_image {
@@ -764,13 +755,15 @@ input[type=checkbox] {
         height: 100%;
         margin-left: 0px;
         margin-top: 0px;
+        transition: all 0.3s ease 0s;
     }
     
     .contact_image {
         object-fit: contain;
         height: 100%;
+        transition: all 0.3s ease 0s;
     }
-    
+
     .spacer100 {
         min-height: 0px;
         width: 0px;
@@ -807,7 +800,7 @@ input[type=checkbox] {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding-top: 10px;
+        padding-top: 1rem;
         margin-right: 40px;
         padding-left: 40px;
     }
@@ -822,6 +815,7 @@ input[type=checkbox] {
     }
 
     .red_primary_button {
+        margin-bottom: 1rem;
         padding: 15px 55px 15px 55px;
         border-radius: 10px;
         letter-spacing: 1.5px;
@@ -834,7 +828,7 @@ input[type=checkbox] {
         cursor: url(../assets/cursors/main_cursor_small_pointer.png), pointer;
         outline: none;
         border: none;
-        font-size: 12px;
+        font-size: 0.8rem;
     }
 
     .social_bar {
@@ -848,8 +842,9 @@ input[type=checkbox] {
         margin-top: 0px;
         display: flex;
         flex-direction: row;
-        height: 120px;
+        height: 7.5rem;
         overflow-x: scroll;
+        width: 20.9rem;
     }
 
     .projectsContainer .secondSlot{
@@ -859,13 +854,13 @@ input[type=checkbox] {
     .projectsCards {
         position: static;
         top: 50%;
-        width: 400px;
+        width: 25rem;
         left: 50%;
         margin: 0px 0px 0px 0px;
         user-select: none;
         transform: translate3d(0, 0, 0) rotateX(0deg);
         transform-style: preserve-3d;
-        display: flex;
+        display: flex; 
         flex-direction: row;
     }
 
@@ -905,6 +900,7 @@ input[type=checkbox] {
         object-fit: cover;
         transform: translateX(100%);
     }
+
     .projectsCards > div img {
         width: 50px;
         height: 50px;
@@ -912,6 +908,7 @@ input[type=checkbox] {
         margin-left: 10px;
         pointer-events: none;
     }
+
     .projectsCards > div h3 {
         position: absolute;
         bottom: 18px;
@@ -919,6 +916,7 @@ input[type=checkbox] {
         font-size: 14px;
         font-weight: 800;
     }
+
     .projectsCards > div span {
         position: absolute;
         font-weight: 700;
@@ -985,7 +983,7 @@ input[type=checkbox] {
     }
 
     .projectsCards > div:hover {
-        transform: rotateX(0deg) rotateY(0deg) rotate(0deg) translate(0px, -20px);
+        transform: rotateX(3deg) rotateY(3deg) rotate(3deg) translate(0px, 0px);
     }
 
     .projectsCards > div:hover:after {
@@ -994,8 +992,8 @@ input[type=checkbox] {
     }
 
     .blue_primary_button {
-        margin-top: 1rem;
-        padding: 15px 30px 15px 30px;
+        margin-top: 0.8rem;
+        padding: 1rem 2rem 1rem 2rem;
         border-radius: 10px;
         letter-spacing: 1.5px;
         font-weight: 700;
@@ -1010,6 +1008,8 @@ input[type=checkbox] {
         font-size: 12px;
     }
 
+    //===================================
+
     .social_bar_footer{
         display: none;
     }
@@ -1018,14 +1018,15 @@ input[type=checkbox] {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 40px 40px 25px 40px;
-        height: 80vh;
+        padding: 30px 20px 25px 20px;
+        height: 85vh;
         width: 100%;
         background-color: color("light-grey");
     }
     
     .sc_logo {
-        height: 30px;
+        margin-left: 20px;
+        height: 2.8rem;
     }
     
     .footer_top {
@@ -1035,41 +1036,45 @@ input[type=checkbox] {
     }
     
     .footer_links {
-        margin: 0px 100px 0px 20px;
+        margin: 0px 20px 0px 20px;
         display: grid;
         grid-template-columns: auto auto;
+        
     }
     
     .products_list {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
     
     .experiments_list {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
     
     .education_list {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
     
     .developer_list {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
-    
+
     .footer_bar {
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: end;
+        flex-direction: row;
+        justify-content: center;
     }
     
     .page_link_footer {
         margin-bottom: 15px;
         text-transform: capitalize;
     }
-    
 
 }
