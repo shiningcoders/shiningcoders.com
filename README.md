@@ -6,12 +6,13 @@ Website Homepage UI
 [![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://shiningcoders.github.io/shiningcoders.com/)
 [![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://shiningcoders.github.io/shiningcoders.com/)
 [![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://shiningcoders.github.io/shiningcoders.com/)
+
 ## Road Map
 
-- Desktop UI
-- Hovering Effects
-- Media Queries for Mobile and Tablet Devices
-- Transitional Efects
-- Scrolling Animations
+- ✅ Desktop UI
+- ✅ Hovering Effects
+- ✅ Media Queries for Mobile and Tablet Devices
+- ⬜ Transitional Efects
+- ⬜ Scrolling Animations
 
 ### [Under development]
