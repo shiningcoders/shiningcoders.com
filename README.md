@@ -12,6 +12,8 @@ Website Homepage UI
 - ✅ Desktop UI
 - ✅ Hovering Effects
 - ✅ Media Queries for Mobile and Tablet Devices
+- ⬜ Record subscribing emails
+- ⬜ Redirect to Join Us Page
 - ⬜ Transitional Efects
 - ⬜ Scrolling Animations
 
